@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Produtos</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header>
+
+        </header>
+        <main>
+            <div class="container mt-4">
+                <h2>Cadastro de Produtos</h2>
+                <form id="frmProduto">
+                    <div class="mb-3">
+                        <label for="nome">Produto:</label>
+                        <input type="text" name="nome" id="nome" class="form-control" require>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nome">Preço:</label>
+                        <input type="text" name="vlvenda" id="vlvenda" class="form-control" require>
+                    </div>
+                    <label for="nome">Categoria:</label>
+                    <div class="input-group mb-3">
+                        <input type="text" name="cat" id="cat" class="form-control" require readonly>
+                        <input type="text" name="cnome" id="cnome" class="form-control" require readonly>
+                        <button class="btn btn-outline-secondary" type="button" name="btnbuscar" id="btnbuscar"
+                            data-bs-toggle="modal" data-bs-target="#frmBuscaCategoria">Buscar</button>
+                    </div>
+                    <button type="submit" class="btn btn-primary">GRAVAR</button>
+                </form>
+                <!-- Modal -->
+                <div class="modal fade" id="frmBuscaCategoria" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Selecionar Categoria</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div name="gridCategoria" id="gridCategoria"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Listagem visual HTML CSS -->
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <b>Produto</b>
+                    </div>
+                    <div class="col-sm-2">
+                        <b>Preço</b>
+                    </div>
+                    <div class="col-sm-4">
+                        <b>Operações</b>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="gridProduto">
+                <!-- aqui o javascript cria a tabela -->
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- script para conectar ao servicor da api e chamar o serviço especifico -->
+    <script src="index.js"></script>
+</body>
+
+</html>
