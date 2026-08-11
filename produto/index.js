@@ -100,7 +100,3 @@ window.onload = () => {
     carregarcategorias();
     carregarprodutos();
 };
-//window.onload = carregarcategorias,carregarprodutos;
-//window.onload = carregarprodutos,carregarcategorias; 
-//window.onload = carregarprodutos; 
-//window.onload = carregarcategorias;
